@@ -4,8 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="unittest使用步骤, Hexo">
+    <meta name="description" content="unittest使用流程
+1.导入包import unittest   
+import time
+import os
+import HTMLTestRunner
+from selenium import webdriver
+from Uti">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hexo</title>
+    <title>unittest使用步骤 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,13 +290,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        unittest使用步骤
                     </div>
                 </div>
             </div>
@@ -400,12 +406,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/unittest/">
+                                <span class="chip bg-color">unittest</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/autotest/" class="post-category">
+                                autotest
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -429,20 +448,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <h2 id="unittest使用流程"><a href="#unittest使用流程" class="headerlink" title="unittest使用流程"></a>unittest使用流程</h2><a id="more"></a>
+<h3 id="1-导入包"><a href="#1-导入包" class="headerlink" title="1.导入包"></a>1.导入包</h3><pre><code>import unittest   
+import time
+import os
+import HTMLTestRunner
+from selenium import webdriver
+from Utils.send_mail_file import send_email</code></pre><h3 id="2-继承测试类-设置前置条件"><a href="#2-继承测试类-设置前置条件" class="headerlink" title="2.继承测试类\设置前置条件"></a>2.继承测试类\设置前置条件</h3><pre><code>class testBaidu(unittest.TestCase):
+    def setUp(self):    #3.前置条件
+    Chromedi = &quot;C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe&quot;
+        os.environ[&quot;webdriver.Chrome.driver&quot;] = Chromedi
+        self.driver = webdriver.Chrome(Chromedi)  # 驱动
+        self.driver.get(&quot;https://www.baidu.com&quot;)
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(10)</code></pre><h3 id="3-后置清场条件"><a href="#3-后置清场条件" class="headerlink" title="3.后置清场条件"></a>3.后置清场条件</h3><pre><code>def tearDown(self): 
+    time.sleep(10)
+    self.driver.quit()</code></pre><h3 id="4-编写用例并插入检查点"><a href="#4-编写用例并插入检查点" class="headerlink" title="4.编写用例并插入检查点"></a>4.编写用例并插入检查点</h3><pre><code>def test_baidu_case1(self): 
+    self.driver.find_element_by_name(&apos;wd&apos;).send_keys(&apos;最终幻想14&apos;)
+    time.sleep(2)
+    title=self.driver.title
+    self.assertEqual(&apos;百度一下，你就知道&apos;,title) #6.断言:检查点
+def test_baidu_case2(self):
+    self.driver.find_element_by_name(&apos;wd&apos;).send_keys(&quot;最终幻想14 5.0版本&quot;)
+    time.sleep(2)
+    title = self.driver.title
+    self.assertEqual(&apos;最终幻想14 5.0版本_百度搜索&apos;,title)  # 断言:检查点</code></pre><h3 id="5-执行模块"><a href="#5-执行模块" class="headerlink" title="5.执行模块"></a>5.执行模块</h3><pre><code>if __name__==&apos;__main__&apos;:    #__main__当前模块
+    # unittest.main()
+    suite=unittest.TestSuite()
+    # suite.addTest(&apos;test_baidu_case1&apos;)
+    # suite.addTest(&apos;test_baidu_case2&apos;)
+    suite.addTest(testBaidu(&apos;test_baidu_case1&apos;))
+    suite.addTest(testBaidu(&apos;test_baidu_case2&apos;))</code></pre><hr>
+<h5 id="生成数据报表-需要导入HTMLTestRunner模块-os模块进行文件的读写操作-文件需要关闭或者刷新才能新增内容-否则文件数据在缓存区"><a href="#生成数据报表-需要导入HTMLTestRunner模块-os模块进行文件的读写操作-文件需要关闭或者刷新才能新增内容-否则文件数据在缓存区" class="headerlink" title="生成数据报表,需要导入HTMLTestRunner模块,os模块进行文件的读写操作,文件需要关闭或者刷新才能新增内容,否则文件数据在缓存区"></a>生成数据报表,需要导入HTMLTestRunner模块,os模块进行文件的读写操作,文件需要关闭或者刷新才能新增内容,否则文件数据在缓存区</h5><hr>
+<pre><code>now = time.strftime(&quot;%Y-%m-%d_%d_%H_%M_%S&quot;, time.localtime(time.time()))
+filename=&apos;H:/T126python/result/&apos;+now+&apos;result.html&apos;
+fp=open(filename,&apos;wb&apos;)
+runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title=u&apos;百度测试报告&apos;,description=u&apos;用例执行情况:&apos;)
+runner.run(suite)
+fp.close()
+send_email(filename)</code></pre>
             </div>
             <hr/>
 
@@ -602,8 +646,8 @@
                 </a>
             </div>
             <br/>
-            <a  href="/2019/09/25/hello-world/">
-                    《Hello World》
+            <a  href="/2019/09/25/unittest使用步骤/">
+                    《unittest使用步骤》
             </a> by
             <a href="http://yoursite.com">
                 John Doe
@@ -648,25 +692,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/09/25/unittest使用步骤/">
+                <a href="/2019/09/25/Python简介/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="unittest使用步骤">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Python简介">
                         
-                        <span class="card-title">unittest使用步骤</span>
+                        <span class="card-title">Python简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            unittest使用流程
-1.导入包import unittest   
-import time
-import os
-import HTMLTestRunner
-from selenium import webdriver
-from Uti
+                            Python简介
+简单易学,功能强大的编程语言,有高效率的高层数据结构,简单而有效地实现面向对象编程,基础代码库强大
+覆盖了网络、文件、GUI、数据库、文本等内容
+语法简洁,功能强大,丰富和强大的内库
+可对其他语言程序进行集成和封装.例如J
                         
                     </div>
                     <div class="publish-info">
@@ -677,8 +719,8 @@ from Uti
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/autotest/" class="post-category">
-                                    autotest
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -688,8 +730,8 @@ from Uti
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/unittest/">
-                        <span class="chip bg-color">unittest</span>
+                    <a href="/tags/Python基础/">
+                        <span class="chip bg-color">Python基础</span>
                     </a>
                     
                 </div>
@@ -700,7 +742,7 @@ from Uti
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="fas fa-chevron-right"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/09/25/hello-world/">
@@ -730,7 +772,6 @@ from Uti
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
