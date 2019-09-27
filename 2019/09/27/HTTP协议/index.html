@@ -5,11 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Python简介, Hexo">
-    <meta name="description" content="Python简介
-简单易学,功能强大的编程语言,有高效率的高层数据结构,简单而有效地实现面向对象编程,基础代码库强大
-覆盖了网络、文件、GUI、数据库、文本等内容
-语法简洁,功能强大,丰富和强大的内库
-可对其他语言程序进行集成和封装.例如J">
+    <meta name="description" content="HTTP协议
+什么是HTTP协议?端口号是多少?HyperText Transfer Protocol,超文本传输协议,端口号是80
+什么是HTTPs协议?端口号是多少?Hypertext Transfer Protocol Secure,">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -406,8 +404,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python基础/">
-                                <span class="chip bg-color">Python基础</span>
+                            <a href="/tags/HTTP/">
+                                <span class="chip bg-color">HTTP</span>
                             </a>
                         
                     </div>
@@ -418,8 +416,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/网络协议/" class="post-category">
+                                网络协议
                             </a>
                         
                     </div>
@@ -430,7 +428,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-25
+                    2019-09-27
                 </div>
 
                 
@@ -441,20 +439,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="Python简介"><a href="#Python简介" class="headerlink" title="Python简介"></a>Python简介</h4><ul>
-<li>简单易学,功能强大的编程语言,有高效率的高层数据结构,简单而有效地实现面向对象编程,基础代码库强大</li>
-<li>覆盖了网络、文件、GUI、数据库、文本等内容</li>
-<li>语法简洁,功能强大,丰富和强大的内库</li>
-<li>可对其他语言程序进行集成和封装.例如JAVA、C语言、C++等<h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h4></li>
-<li>网络应用型项目开发，包括网站和后台服务；</li>
-<li>数据分析与交互、探索性计算和数据可视化；</li>
-<li>自动化项目运维；</li>
-<li>数据爬虫</li>
-<li>自动化测试、性能测试；<h4 id="Python安装"><a href="#Python安装" class="headerlink" title="Python安装"></a>Python安装</h4>最新版本为：3.7.4（3.8测试中）<br>官网下载最新安装包，安装即可</li>
-<li><em>环境变量配置*</em> ：修改系统变量中path变量，增加Python安装路径\scripts<br>IDE工具：Pycharm</li>
-<li><em>PVM*</em> ：</li>
+                <h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><ul>
+<li>什么是HTTP协议?端口号是多少?<br>HyperText Transfer Protocol,超文本传输协议,端口号是80</li>
+<li>什么是HTTPs协议?端口号是多少?<br>Hypertext Transfer Protocol Secure,超文本传输安全协议=http+ssl 端口是443</li>
+<li>接口请求包括哪些部分组成?请求行包括哪些部分组成?</li>
 </ul>
-<p>1.加载代码文件；<br>2.翻译成AST；<br>3生成bytecode；<br>4.在PVM上执行bytecode，PVM实际上是一个基于<strong>栈</strong>的虚拟机<br><strong>文件类型</strong>：<br>1.源代码文件 .py<br>2.字节码文件 .pyc</p>
+<p>1.请求报文(请求行/请求头/请求数据/空行)<br>        请求行<br>            求方法字段、URL字段和HTTP协议版本<br>            例如：GET /index.html HTTP/1.1<br>                get方法将数据拼接在url后面，传递参数受限<br>            请求方法：<br>                GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT<br>        请求头(key value形式)<br>            User-Agent：产生请求的浏览器类型。<br>            Accept：客户端可识别的内容类型列表。<br>            Host：主机地址<br>        请求数据<br>            post方法中，会把数据以key value形式发送请求<br>        空行<br>            发送回车符和换行符，通知服务器以下不再有请求头</p>
+<ul>
+<li>接口响应(返回)包括那些部分组成?响应行包括那些部分组成?</li>
+</ul>
+<p>2.响应报文(状态行、消息报头、响应正文)<br>        状态行:协议版本号+状态码+原因<br>        消息报头<br>        响应正文</p>
+<ul>
+<li>post和get的区别？  <pre><code>get是从服务器上获取数据，post是向服务器传送数据。
+get是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。
+对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据。
+get传送的数据量较小，不能大于2KB。
+post传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。
+get安全性非常低，post安全性较高。但是执行效率却比Post方法好。 </code></pre></li>
+</ul>
+<p>建议：<br>1、get方式的安全性较Post方式要差些，包含机密信息的话，建议用Post数据提交方式；<br>2、在做数据查询时，建议用Get方式；而在做数据添加、修改或删除时，建议用Post方式；</p>
+<ul>
+<li>响应状态码:1XX  2XX 3XX  4XX  5XX 分别代表什么意思?<pre><code>1xx指示信息–表示请求已接收，继续处理
+2xx成功–表示请求已被成功接收、理解、接受
+3xx重定向–要完成请求必须进行更进一步的操作。
+4xx客户端错误–请求有语法错误或请求无法实现。
+5xx服务器端错误–服务器未能实现合法的请求。</code></pre></li>
+<li>200  401   403  404   500代表什么意思<br>200表示成功。<br>401表示请求需要用户验证。<br>403表示服务器接受请求，但是被拒绝处理。<br>404表示服务器未找到任何匹配Request-URI的资源。<br>500表示服务器遭遇异常阻止了当前请求的执行。<h3 id="接口测试基础"><a href="#接口测试基础" class="headerlink" title="接口测试基础"></a>接口测试基础</h3></li>
+<li><strong>什么是接口测试</strong><br>接口测试是测试系统组件间接口的一种测试，主要用于测试系统与外部其他系统之间的接口，以及系统内部各个子模块之间的接口。</li>
+<li><strong>接口测试的优势</strong></li>
+</ul>
+<p>1.能够提早发现 bug，符合质量控制前移的理念。<br>2.接口测试低成本高效益，因为接口测试可以自动化并且是持续集成的。<br>3.接口测试从用户的角度对系统接口进行全面检测。实际项目中，接口测试会覆盖一定程度的业务逻辑</p>
+<ul>
+<li><strong>接口测试的依据</strong><br>接口开发文档/业务用例文档</li>
+<li><strong>接口测试的目的</strong></li>
+</ul>
+<p>1.可能发现客户端没有发现的bug(那么也叫隐藏bug)<br>2.及早爆出风险（保证质量正常上线）<br>3.接口稳定了，前端随便改<br>4.最重要检查系统安全性，稳定性</p>
+<ul>
+<li><strong>接口测试的流程</strong><br>需求分析 -&gt; 用例设计 -&gt; 脚本开发 -&gt; 测试执行 -&gt; 结果分析</li>
+<li><strong>接口测试用例设计思路</strong><br>验证接口功能是否实现并正确(接口逻辑)<br>运用等价类、边界值法<br>覆盖入参的同事要覆盖出参<br>参数组合测试</li>
+</ul>
 
             </div>
             <hr/>
@@ -615,7 +638,7 @@
                 </a>
             </div>
             <br/>
-            <a  href="/2019/09/25/Python简介/">
+            <a  href="/2019/09/27/HTTP协议/">
                     《Python简介》
             </a> by
             <a href="http://yoursite.com">
@@ -657,9 +680,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/09/27/HTTP协议/">
                     <div class="card-image">
@@ -677,9 +701,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -692,6 +716,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -710,19 +735,19 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/25/unittest使用步骤/">
+                <a href="/2019/09/25/Python简介/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="unittest使用步骤">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Python简介">
                         
-                        <span class="card-title">unittest使用步骤</span>
+                        <span class="card-title">Python简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            unittest使用流程
+                            简单易学,功能强大的编程语言
                         
                     </div>
                     <div class="publish-info">
@@ -733,8 +758,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/autotest/" class="post-category">
-                                    autotest
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -744,8 +769,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/unittest/">
-                        <span class="chip bg-color">unittest</span>
+                    <a href="/tags/Python基础/">
+                        <span class="chip bg-color">Python基础</span>
                     </a>
                     
                 </div>
