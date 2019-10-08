@@ -4,14 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="unittest使用步骤, Hexo">
-    <meta name="description" content="unittest使用流程
-1.导入包import unittest   
-import time
-import os
-import HTMLTestRunner
-from selenium import webdriver
-from Uti">
+    <meta name="keywords" content="Fiddler抓包原理, Hexo">
+    <meta name="description" content="Fiddler抓包原理一、Fiddler简介Fiddler是一款免费且功能强大的数据包抓取软件。它通过代理的方式获取程序http通讯的数据，可以用其检测网页和服务器的交互情况，能够记录所有客户端和服务器间的http请求，支持监视、设置断点、">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +13,7 @@ from Uti">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>unittest使用步骤 | Hexo</title>
+    <title>Fiddler抓包原理 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -290,13 +284,13 @@ from Uti">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        unittest使用步骤
+                        Fiddler抓包原理
                     </div>
                 </div>
             </div>
@@ -408,8 +402,8 @@ from Uti">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/unittest/">
-                                <span class="chip bg-color">unittest</span>
+                            <a href="/tags/fiddler抓包/">
+                                <span class="chip bg-color">fiddler抓包</span>
                             </a>
                         
                     </div>
@@ -420,8 +414,8 @@ from Uti">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/autotest/" class="post-category">
-                                autotest
+                            <a href="/categories/自动化工具/" class="post-category">
+                                自动化工具
                             </a>
                         
                     </div>
@@ -432,7 +426,7 @@ from Uti">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-25
+                    2019-09-27
                 </div>
 
                 
@@ -443,45 +437,10 @@ from Uti">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="unittest使用流程"><a href="#unittest使用流程" class="headerlink" title="unittest使用流程"></a>unittest使用流程</h2><a id="more"></a>
-<h3 id="1-导入包"><a href="#1-导入包" class="headerlink" title="1.导入包"></a>1.导入包</h3><pre><code>import unittest   
-import time
-import os
-import HTMLTestRunner
-from selenium import webdriver
-from Utils.send_mail_file import send_email</code></pre><h3 id="2-继承测试类-设置前置条件"><a href="#2-继承测试类-设置前置条件" class="headerlink" title="2.继承测试类\设置前置条件"></a>2.继承测试类\设置前置条件</h3><pre><code>class testBaidu(unittest.TestCase):
-    def setUp(self):    #3.前置条件
-    Chromedi = &quot;C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe&quot;
-        os.environ[&quot;webdriver.Chrome.driver&quot;] = Chromedi
-        self.driver = webdriver.Chrome(Chromedi)  # 驱动
-        self.driver.get(&quot;https://www.baidu.com&quot;)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(10)</code></pre><h3 id="3-后置清场条件"><a href="#3-后置清场条件" class="headerlink" title="3.后置清场条件"></a>3.后置清场条件</h3><pre><code>def tearDown(self): 
-    time.sleep(10)
-    self.driver.quit()</code></pre><h3 id="4-编写用例并插入检查点"><a href="#4-编写用例并插入检查点" class="headerlink" title="4.编写用例并插入检查点"></a>4.编写用例并插入检查点</h3><pre><code>def test_baidu_case1(self): 
-    self.driver.find_element_by_name(&apos;wd&apos;).send_keys(&apos;最终幻想14&apos;)
-    time.sleep(2)
-    title=self.driver.title
-    self.assertEqual(&apos;百度一下，你就知道&apos;,title) #6.断言:检查点
-def test_baidu_case2(self):
-    self.driver.find_element_by_name(&apos;wd&apos;).send_keys(&quot;最终幻想14 5.0版本&quot;)
-    time.sleep(2)
-    title = self.driver.title
-    self.assertEqual(&apos;最终幻想14 5.0版本_百度搜索&apos;,title)  # 断言:检查点</code></pre><h3 id="5-执行模块"><a href="#5-执行模块" class="headerlink" title="5.执行模块"></a>5.执行模块</h3><pre><code>if __name__==&apos;__main__&apos;:    #__main__当前模块
-    # unittest.main()
-    suite=unittest.TestSuite()
-    # suite.addTest(&apos;test_baidu_case1&apos;)
-    # suite.addTest(&apos;test_baidu_case2&apos;)
-    suite.addTest(testBaidu(&apos;test_baidu_case1&apos;))
-    suite.addTest(testBaidu(&apos;test_baidu_case2&apos;))</code></pre><hr>
-<h5 id="生成数据报表-需要导入HTMLTestRunner模块-os模块进行文件的读写操作-文件需要关闭或者刷新才能新增内容-否则文件数据在缓存区"><a href="#生成数据报表-需要导入HTMLTestRunner模块-os模块进行文件的读写操作-文件需要关闭或者刷新才能新增内容-否则文件数据在缓存区" class="headerlink" title="生成数据报表,需要导入HTMLTestRunner模块,os模块进行文件的读写操作,文件需要关闭或者刷新才能新增内容,否则文件数据在缓存区"></a>生成数据报表,需要导入HTMLTestRunner模块,os模块进行文件的读写操作,文件需要关闭或者刷新才能新增内容,否则文件数据在缓存区</h5><hr>
-<pre><code>now = time.strftime(&quot;%Y-%m-%d_%d_%H_%M_%S&quot;, time.localtime(time.time()))
-filename=&apos;H:/T126python/result/&apos;+now+&apos;result.html&apos;
-fp=open(filename,&apos;wb&apos;)
-runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title=u&apos;百度测试报告&apos;,description=u&apos;用例执行情况:&apos;)
-runner.run(suite)
-fp.close()
-send_email(filename)</code></pre>
+                <h3 id="Fiddler抓包原理"><a href="#Fiddler抓包原理" class="headerlink" title="Fiddler抓包原理"></a>Fiddler抓包原理</h3><p><strong>一、Fiddler简介</strong><br>Fiddler是一款免费且功能强大的数据包抓取软件。它通过代理的方式获取程序http通讯的数据，可以用其检测网页和服务器的交互情况，能够记录所有客户端和服务器间的http请求，支持监视、设置断点、甚至修改输入输出数据等功能。fiddler包含了一个强大的基于事件脚本的子系统，并且能够使用.net框架语言扩展。</p>
+<p><strong>二、Fiddler工作原理</strong><br>Fiddler是位于客户端和服务器端之间的HTTP代理， 它能够记录客户端和服务器之间的所有 HTTP(S)请求，可以针对特定的HTTP(S)请求，分析网络传输的数据，还可以设置断点、修改请求的数据和服务器返回的数据<br>Fiddler在浏览器与服务器之间建立一个代理服务器，Fiddler工作于七层中的应用层，能够捕获通过的HTTP(S)请求。Fiddler启动后会自动将代理服务器设置成本机，默认端口为8888。Fiddler不仅能记录PC上浏览器的网络请求数据，还可以记录同一网络中的其他设备的HTTP(S)请求数据。</p>
+<p><strong>三、Fiddler抓取HTTPS原理</strong><br>现在APP中的数据传输基本上都使用HTTS传输，传输的数据都是经过加密的，这增加了我们分析数据包的难度，还好Fiddler除了可以抓取HTTP数据包，还可以抓取HTTPS数据包。由于HTTPS传输需要使用到CA证书，所以抓取抓取HTTPS数据包时需要做一些特殊配置。<br>1) 客户端请求建立HTTPS链接，发送客户端支持的加密协议及版本列表等信息给服务器端。<br>2) Fiddler接受客户端请求并伪装成客户端向WEB服务器发送相同的请求。<br>3) WEB服务器收到Fiddler的请求以后，从请求中筛选合适的加密协议。并返回服务器CA证书，证书中包括公钥信息。<br>4) Fiddler收到WEB服务器的响应后保存服务器证书并自签名一个CA证书，伪装成服务器，把该证书下发给客户端。<br>5) 客户端验证证书合法性。（Fiddler能否抓取到HTTPS报文关键看这一步）<br>6) 客户端生产对称密钥，通过证书的公钥加密发送给服务器。<br>7) Fiddler拦截客户端的请求以后，使用私钥解密该报文，获取对称加密秘钥，并使用服务器证书中带的公钥加密该对称密钥发送给WEB服务器。此时对称密钥已经泄露了，以后可以使用该秘钥界面客户端和服务器端传输的数据。<br>8) WEB服务器接收到客户端发送的加密的对称密钥后使用私钥解密，并使用对称密钥加密测试数据传给客户端。<br>9) Fiddler使用前面获取的对称密钥解密报文。<br>10) 客户端验证数据无误以后HTTPS连接就建立完成，客户端开始向服务器发送使用对称密钥加密的业务数据<br>11) Fiddler使用前面获取的对称密钥解密客户端发送的数据并重新加密转发给客户端。</p>
+
             </div>
             <hr/>
 
@@ -641,8 +600,8 @@ send_email(filename)</code></pre>
                 </a>
             </div>
             <br/>
-            <a  href="/2019/09/25/unittest使用步骤/">
-                    《unittest使用步骤》
+            <a  href="/2019/09/27/Fiddler抓包原理/">
+                    《Fiddler抓包原理》
             </a> by
             <a href="http://yoursite.com">
                 kiriharo
@@ -687,31 +646,31 @@ send_email(filename)</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/09/25/Python简介/">
+                <a href="/2019/10/07/selenium基础/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Python简介">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="自动化测试简介">
                         
-                        <span class="card-title">Python简介</span>
+                        <span class="card-title">自动化测试简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简单易学,功能强大的编程语言
+                            自动化测试
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/自动化/" class="post-category">
+                                    自动化
                                 </a>
                             
                             
@@ -721,8 +680,8 @@ send_email(filename)</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python基础/">
-                        <span class="chip bg-color">Python基础</span>
+                    <a href="/tags/自动化/">
+                        <span class="chip bg-color">自动化</span>
                     </a>
                     
                 </div>
@@ -733,46 +692,45 @@ send_email(filename)</code></pre>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="fas fa-chevron-right"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/25/unittest使用步骤/">
+                <a href="/2019/09/27/HTTP协议/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="unittest使用步骤">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="HTTP协议">
                         
-                        <span class="card-title">unittest使用步骤</span>
+                        <span class="card-title">HTTP协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            unittest使用流程
+                            HTTP协议
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/autotest/" class="post-category">
-                                    autotest
+                            <a href="/categories/网络协议/" class="post-category">
+                                    网络协议
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/unittest/">
-                        <span class="chip bg-color">unittest</span>
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>
