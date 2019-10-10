@@ -4,8 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="�ӿڲ��Ի���, Hexo">
-    <meta name="description" content="һ.ʲô�ǽӿڣ��ӿڲ�����Ҫ�����ⲿϵͳ��ϵͳ֮���Լ��ڲ�������ϵͳ֮��Ľ����㣬�����ض��Ľ����㣬Ȼ��ͨ����Щ����������ͨ��һЩ����Ĺ���Ҳ����Э�飬����������">
+    <meta name="keywords" content="接口测试基础, Hexo">
+    <meta name="description" content="一.什么是接口？
+接口测试主要用于外部系统与系统之间以及内部各个子系统之间的交互点，定义特定的交互点，然后通过这些交互点来，通过一些特殊的规则也就是协议，来进行数据之间的交互。
+二.接口都有哪些类型？接口一般分为两种：
+1.程序内部的接口
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>�ӿڲ��Ի��� | Hexo</title>
+    <title>接口测试基础 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,13 +288,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        �ӿڲ��Ի���
+                        接口测试基础
                     </div>
                 </div>
             </div>
@@ -402,8 +406,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/�ӿڲ���/">
-                                <span class="chip bg-color">�ӿڲ���</span>
+                            <a href="/tags/接口测试/">
+                                <span class="chip bg-color">接口测试</span>
                             </a>
                         
                     </div>
@@ -426,7 +430,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-09
+                    2019-10-10
                 </div>
 
                 
@@ -437,30 +441,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="һ-ʲo�aeӿڣ�"><a href="#һ-ʲo�aeӿڣ�" class="headerlink" title="һ.ʲô�ǽӿڣ�"></a>һ.ʲô�ǽӿڣ�</h4><p>�ӿڲ�����Ҫ�����ⲿϵͳ��ϵͳ֮���Լ��ڲ�������ϵͳ֮��Ľ����㣬�����ض��Ľ����㣬Ȼ��ͨ����Щ����������ͨ��һЩ����Ĺ���Ҳ����Э�飬����������֮��Ľ�����</p>
-<h4 id="��-�ӿڶ�����Щ���ͣ�"><a href="#��-�ӿڶ�����Щ���ͣ�" class="headerlink" title="��.�ӿڶ�����Щ���ͣ�"></a>��.�ӿڶ�����Щ���ͣ�</h4><p><strong>�ӿ�һ���Ϊ���֣�</strong></p>
-<pre><code>1.�����ڲ��Ľӿ�
-2.ϵͳ����Ľӿ�
-ϵͳ����Ľӿڣ�������Ҫ�ӱ����վ��������ϻ�ȡ��Դ����Ϣ�����˿϶���������ݿ⹲�����㣬��ֻ�ܸ����ṩһ������д�õķ�������ȡ���ݣ����������ṩ�Ľӿھ���ʹ����д�õķ������Ӷ��ﵽ���ݹ�����Ŀ�ġ�
-�����ڲ��Ľӿڣ������뷽��֮�䣬ģ����ģ��֮��Ľ����������ڲ��׳��Ľӿڣ�����bbsϵͳ���е�¼ģ�顢����ģ��ȵȣ�����Ҫ�����ͱ����ȵ�¼����ô������ģ��͵��н��������ͻ��׳�һ���ӿڣ����ڲ�ϵͳ���е��á�</code></pre><p><strong>�ӿڵķ��ࣺ</strong></p>
-<pre><code>1.webservice�ӿ�
-2.http api�ӿ�
-webService�ӿ�����soapЭ��ͨ��http���䣬�����ĺͷ��ر��Ķ���xml��ʽ�ģ������ڲ��Ե�ʱ����ͨ�����߲��ܽ��е��ã����ԡ�
-http api�ӿ�����httpЭ�飬ͨ��·�������ֵ��õķ����������Ķ���key-value��ʽ�ģ����ر���һ�㶼��json������get��post�ȷ�������Ҳ����õ���������ʽ��
-json��һ��ͨ�õ��������ͣ����е����Զ���ʶ������json�ı������ַ������������������޹أ�ֻ�ǿ��Ծ������Լӹ�����ת�����������Ե��������ͣ��������ת����Python�е��ֵ䣬key-value����ʽ������ת����JavaScript�е�ԭ�����󣬿���ת����java�е������ȡ���</code></pre><h4 id="��-�ӿڵi��ʼ��乤��ԭ����ʲo��"><a href="#��-�ӿڵi��ʼ��乤��ԭ����ʲo��" class="headerlink" title="��.�ӿڵı��ʼ��乤��ԭ����ʲô��"></a>��.�ӿڵı��ʼ��乤��ԭ����ʲô��</h4><p>�ӿ�����Լ򵥵�����������URL������ԭ���ͻ�˵URLͨ��get����post���������������һЩ������Ȼ��õ�һЩ��Ӧ�ķ���ֵ�����ʾ������ݵĴ�������ա�</p>
-<h4 id="��-ʲo�aeӿڲ��ԣ�"><a href="#��-ʲo�aeӿڲ��ԣ�" class="headerlink" title="��.ʲô�ǽӿڲ��ԣ�"></a>��.ʲô�ǽӿڲ��ԣ�</h4><p>����˵����ͨ��URL���������������ģ��ȣ����������봫������ݣ�Ȼ�󿴿����Ƿ��ص��ǲ�������Ԥ����Ҫ�ġ�</p>
-<h4 id="��-��ʲoҪ���ӿڲ��ԣ�"><a href="#��-��ʲoҪ���ӿڲ��ԣ�" class="headerlink" title="��.��ʲôҪ���ӿڲ��ԣ�"></a>��.��ʲôҪ���ӿڲ��ԣ�</h4><pre><code>Խ�ײ㷢��bug�������޸��ɱ���Խ�͵ġ�
-ǰ�����䣬�ӿڲ���ˣ���˲��ñ䣬ǰ����������˿����ġ�
-���ϵͳ�İ�ȫ�ԡ��ȶ��ԣ�ǰ�˴��β����ţ����義�����ǰ�˼۸񲻿��ܴ���-1Ԫ������ͨ���ӿڿ��Դ���-1Ԫ��
-����ϵͳ���ӶȲ�����������ͳ�Ĳ��Է����ɱ����������Ҳ���Ч�ʴ���½����ӿڲ��Կ����ṩ��������µĽ��������
-�ӿڲ����������ʵ���Զ����������ɣ������UI�Զ���Ҳ�Ƚ��ȶ������Լ����˹��ع���������ɱ���ʱ�䣬���̲������ڣ�֧�ֺ�˿��ٷ������󡣽ӿڳ���������Ϊʲô�ܵͳɱ�������ĸ�Դ��
-���ںܶ�ϵͳǰ��˼ܹ��Ƿ���ģ��Ӱ�ȫ������˵��
-(1)��ֻ����ǰ�˽��������Ѿ���ȫ��������ϵͳ�İ�ȫҪ���ƹ�ǰ��ʵ��̫���ף��� ��Ҫ���ͬ�����п��ƣ�����������¾���Ҫ�ӽӿڲ��������֤��
-(2)��ǰ��˴��䡢��־��ӡ����Ϣ�Ƿ���ܴ���Ҳ����Ҫ��֤�ģ��ر����漰���û�����˽��Ϣ��������֤�����п��ȡ�</code></pre><h4 id="Ӧ�o㳣��Э�鼰�˿ں�"><a href="#Ӧ�o㳣��Э�鼰�˿ں�" class="headerlink" title="Ӧ�ò㳣��Э�鼰�˿ں�"></a>Ӧ�ò㳣��Э�鼰�˿ں�</h4><table>
+                <h4 id="一-什么是接口？"><a href="#一-什么是接口？" class="headerlink" title="一.什么是接口？"></a>一.什么是接口？</h4><a id="more"></a>
+<p>接口测试主要用于外部系统与系统之间以及内部各个子系统之间的交互点，定义特定的交互点，然后通过这些交互点来，通过一些特殊的规则也就是协议，来进行数据之间的交互。</p>
+<h4 id="二-接口都有哪些类型？"><a href="#二-接口都有哪些类型？" class="headerlink" title="二.接口都有哪些类型？"></a>二.接口都有哪些类型？</h4><p><strong>接口一般分为两种：</strong></p>
+<pre><code>1.程序内部的接口
+2.系统对外的接口
+系统对外的接口：比如你要从别的网站或服务器上获取资源或信息，别人肯定不会把数据库共享给你，他只能给你提供一个他们写好的方法来获取数据，你引用他提供的接口就能使用他写好的方法，从而达到数据共享的目的。
+程序内部的接口：方法与方法之间，模块与模块之间的交互，程序内部抛出的接口，比如bbs系统，有登录模块、发帖模块等等，那你要发帖就必须先登录，那么这两个模块就得有交互，它就会抛出一个接口，供内部系统进行调用。</code></pre><p><strong>接口的分类：</strong></p>
+<pre><code>1.webservice接口
+2.http api接口
+webService接口是走soap协议通过http传输，请求报文和返回报文都是xml格式的，我们在测试的时候都用通过工具才能进行调用，测试。
+http api接口是走http协议，通过路径来区分调用的方法，请求报文都是key-value形式的，返回报文一般都是json串，有get和post等方法，这也是最常用的两种请求方式。
+json是一种通用的数据类型，所有的语言都认识它。（json的本质是字符串，他与其他语言无关，只是可以经过稍稍加工可以转换成其他语言的数据类型，比如可以转换成Python中的字典，key-value的形式，可以转换成JavaScript中的原生对象，可以转换成java中的类对象等。）</code></pre><h4 id="三-接口的本质及其工作原理是什么？"><a href="#三-接口的本质及其工作原理是什么？" class="headerlink" title="三.接口的本质及其工作原理是什么？"></a>三.接口的本质及其工作原理是什么？</h4><p>接口你可以简单的理解他就是URL，工作原理就会说URL通过get或者post请求像服务器发送一些东西，然后得到一些相应的返回值，本质就是数据的传输与接收。</p>
+<h4 id="四-什么是接口测试？"><a href="#四-什么是接口测试？" class="headerlink" title="四.什么是接口测试？"></a>四.什么是接口测试？</h4><p>简答的说就是通过URL像服务器或者其他模块等，传输我们想传输的数据，然后看看他们返回的是不是我们预期想要的。</p>
+<h4 id="五-问什么要做接口测试？"><a href="#五-问什么要做接口测试？" class="headerlink" title="五.问什么要做接口测试？"></a>五.问什么要做接口测试？</h4><pre><code>越底层发现bug，它的修复成本是越低的。
+前端随便变，接口测好了，后端不用变，前后端是两拨人开发的。
+检查系统的安全性、稳定性，前端传参不可信，比如京东购物，前端价格不可能传入-1元，但是通过接口可以传入-1元。
+如今的系统复杂度不断上升，传统的测试方法成本急剧增加且测试效率大幅下降，接口测试可以提供这种情况下的解决方案。
+接口测试相对容易实现自动化持续集成，且相对UI自动化也比较稳定，可以减少人工回归测试人力成本与时间，缩短测试周期，支持后端快速发版需求。接口持续集成是为什么能低成本高收益的根源。
+现在很多系统前后端架构是分离的，从安全层面来说：
+(1)、只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前面实在太容易）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。
+(2)、前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</code></pre><h4 id="应用层常用协议及端口号"><a href="#应用层常用协议及端口号" class="headerlink" title="应用层常用协议及端口号"></a>应用层常用协议及端口号</h4><table>
 <thead>
 <tr>
-<th>�˿ں�</th>
-<th>Э��</th>
+<th>端口号</th>
+<th>协议</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -488,57 +493,57 @@ json��һ��ͨ�õ��������ͣ����е����Զ�
 <td>POP3</td>
 </tr>
 </tbody></table>
-<h4 id="TCP-IP����������"><a href="#TCP-IP����������" class="headerlink" title="TCP/IP����������"></a>TCP/IP����������</h4><pre><code>TCP����Э��
-��TCP/IPЭ����,TCPЭ���ṩ�ɿ������ӷ���,�����������ֽ���һ������.
-��һ�����֣���������ʱ,�ͻ��˷���syn��(syn=j)��������,������SYN_SEND״̬,�ȴ�������ȷ�ϣ�
-SYN��ͬ�����б��(Synchronize Sequence Numbers)
-�ڶ������֣��������յ�syn��,����ȷ�Ͽͻ���SYN��ack=j+1��,ͬʱ�Լ�Ҳ����һ��SYN����syn=k��,��SYN+ACK��,��ʱ����������SYN_RECV״̬��
-���������֣��ͻ����յ���������SYN��ACK��,�����������ȷ�ϰ�ACK(ack=k+1),�˰��������,�ͻ��˺ͷ���������ESTABLISHED״̬,�����������.
-�����������,�ͻ������������ʼ��������</code></pre><h4 id="httpЭ�鷵����-1xx-5xx��˵��-200-403-404-500"><a href="#httpЭ�鷵����-1xx-5xx��˵��-200-403-404-500" class="headerlink" title="httpЭ�鷵����:1xx-5xx��˵��   200 403 404 500"></a>httpЭ�鷵����:1xx-5xx��˵��   200 403 404 500</h4><pre><code>1������������
-2����������ʾ����ɹ��ؽ���
-3��������Ϊ�������ͻ����һ��ϸ������
-4���������ͻ�����
-5������������������
-200   ָʾ�ͷ��˵������Ѿ��ɹ��յ������������ܡ�
-403   �������������󣬵��Ǳ��ܾ�������
-404   �������Ѿ��ҵ��κ�ƥ��Request-URI����Դ��
-500   �����������쳣��ֹ�˵�ǰ�����ִ��
-http://www.cnblogs.com/liulei/archive/2010/05/25/1743315.html �μ�����</code></pre><h4 id="get�����post���������"><a href="#get�����post���������" class="headerlink" title="get�����post���������"></a>get�����post���������</h4><pre><code>get�Ǵӷ������ϻ�ȡ���ݣ�post����������������ݡ�
-get�ǰѲ������ݶ��мӵ��ύ������ACTION������ָ��URL�У�ֵ�ͱ����ڸ����ֶ�һһ��Ӧ����URL�п��Կ�����post��ͨ��HTTP post���ƣ��������ڸ����ֶ��������ݷ�����HTML HEADER��һ���͵�ACTION������ָ��URL��ַ���û�������������̡�
-����get��ʽ������������Request.QueryString��ȡ������ֵ������post��ʽ������������Request.Form��ȡ�ύ�����ݡ�
-get���͵���������С�����ܴ���2KB��
-post���͵��������ϴ�һ�㱻Ĭ��Ϊ�������ơ��������ϣ�IIS4�������Ϊ80KB��IIS5��Ϊ100KB��
-get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��ȴ��Post�����á�
-1��get��ʽ�İ�ȫ�Խ�Post��ʽҪ��Щ������������Ϣ�Ļ���������Post�����ύ��ʽ��
-2���������ݲ�ѯʱ��������Get��ʽ���������������ӡ��޸Ļ�ɾ��ʱ��������Post��ʽ��</code></pre><h4 id="httpЭ������������Щ����-��Ӧ������Щ����"><a href="#httpЭ������������Щ����-��Ӧ������Щ����" class="headerlink" title="httpЭ������������Щ����,��Ӧ������Щ����?"></a>httpЭ������������Щ����,��Ӧ������Щ����?</h4><pre><code>�������:
-������:�������󷽷�,URI,HTTP�汾Э��
-�����ײ��ֶ�
-��������ʵ��
-��Ӧ����:
-״̬��:����HTTP�汾,״̬��,״̬��,ԭ�����
-��Ӧ�ײ��ֶ�
-��Ӧ����ʵ��</code></pre><h4 id="session��token��cookie������"><a href="#session��token��cookie������" class="headerlink" title="session��token��cookie������"></a>session��token��cookie������</h4><p>һ. Ϊʲô��ҪCookie��<br>HTTP��һ����״̬��Э�飬�ͻ�����������������Ӳ��������ݣ����ݴ�����ɺ����Ӿͻ�رա�Cookie�ǽ��HTTP��״̬�Ե���Ч�ֶΣ��������������û��ȡCookie������������Ϣ�����û���¼�󣬷������ᷢ�Ͱ�����¼ƾ�ݵ�Cookie���û�������ͻ��ˣ���������Ը�Cookie����ĳ����ʽ�Ĵ洢���ڴ��Ӳ�̣����û��ٴη��ʸ���վʱ��������ᷢ�͸�Cookie�����������������Ը�ƾ�ݽ�����֤���Ϸ�ʱʹ�û����������û���������Ϳ���ֱ�ӵ�¼��</p>
-<p>Cookie������</p>
-<p>Cookie��ʱ���û��ͻ��˽��б���ģ�����洢λ�ÿɷ�Ϊ���ڴ�ʽCookie��Ӳ��ʽCookie���ڴ�ʽCookie�洢���ڴ��У�������رպ�ͻ���ʧ�����Ҳ����Ϊ�ǳ־�Cookie��ỰCookie��Ӳ��ʽCookie������Ӳ���У��䲻����������Ĺرն���ʧ�������û��ֹ��������˹���ʱ�䣬���Ҳ����Ϊ�־�Cookie��<br>��.Session��Cookie����<br>1.Cookie��Session���ǻỰ������Cookie�������ڿͻ��ˣ�Session�������ڷ������ˡ�  </p>
-<p>2.Cookie�д�С�����Լ�������ڴ�cookie�ĸ���Ҳ�����ƣ�Session��û�д�С���ƺͷ��������ڴ��С�йء�</p>
-<p>3.Cookie�а�ȫ������ͨ�����ػ򱾵��ļ��ҵõ����cookie����Խ��й�����</p>
-<p>4.Session�Ǳ����ڷ��������ϻ����һ��ʱ��Ż���ʧ�����session��������ӷ�������ѹ����</p>
-<p>��.Session��Token������<br>1.token��session����Ϊ��������֤��session������Ϊ�Ự��token������Ϊ���ơ�</p>
-<p>2..������֤ token��ȫ�Ա�session�ã���Ϊÿ��������ǩ�����ܷ�ֹ�����Լ��طŹ�������session�ͱ��뿿��·��������ͨѶ��ȫ��</p>
-<p>3.session��token����Ҫȥ��������ʱ�䡣</p>
-<p>4.ʱ����ռ�Ĳ��ģ�session�ǿռ任ʱ�䣬��token��ʱ�任�ռ䡣</p>
-<p>��.Cookieԭ��<br>Cookie������һЩHTTP����ͷ��HTTP��Ӧͷ��ͨ����ЩHTTPͷ��Ϣʹ������������ͻ�����״̬�������ͻ�������������������������Ҫ��¼�û�״̬��������������Ӧ��Ϣ�а���һ��Set-Cookie����Ӧͷ���ͻ��˻���������Ӧͷ�洢Cookie��Ϣ���ٴ����������ʱ���ͻ��˻���������Ϣ�а���һ��Cookie����ͷ����������������������ͷ�����û����ݡ�״̬�Ƚ��顣</p>
-<p>��.Sessionԭ��<br>����һ�η��ʷ�������ʱ�򣬷����������ڴ��п���һ��ռ䣬����Ψһһ�Ѵ򿪸ÿռ��Կ�ף��ٰ����Կ�׷��ص������������ڶ��η��ʵ�ʱ���������Я�����Կ�׵��������˴򿪶�Ӧ�Ŀռ䣬����ÿռ��Ѿ����������·��ؿ���һ���µĿռ䷵���µ�Կ�׵��������</p>
-<p>��.Tokenԭ��<br>�������һ�η��ʷ����������ݴ�������Ψһ��ʶuserId������˻�ͨ��һЩ�㷨���糣�õ�HMAC-SHA256�㷨��Ȼ���һ����Կ������һ��token��Ȼ��ͨ��BASE64����һ��֮�����token���͸��ͻ��ˣ��ͻ��˽�token�����������´�����ʱ������token���������յ������Ȼ�������ͬ���㷨����Կȥ��֤token�����ͨ����ִ��ҵ���������ͨ�������ز�ͨ����Ϣ��</p>
-<h4 id="��ƽӿڲ���������˼·��"><a href="#��ƽӿڲ���������˼·��" class="headerlink" title="��ƽӿڲ���������˼·��"></a>��ƽӿڲ���������˼·��</h4><pre><code>��֤�ӿڹ����Ƿ�ʵ�ֲ���ȷ���ӿ��߼���
-�ȼ��ࡢ�߽�ֵ��
-������ε�ͬʱ��Ҫ���ǳ���
-������ϲ���</code></pre><h4 id="ʲo��mock����"><a href="#ʲo��mock����" class="headerlink" title="ʲô��mock����"></a>ʲô��mock����</h4><h4 id="�ӿڲ�������"><a href="#�ӿڲ�������" class="headerlink" title="�ӿڲ�������"></a>�ӿڲ�������</h4><pre><code>�����ӿ��ĵ����ݣ��ӿ������ַ���ӿڲ������������͡��ӿڵ���;
-����д������ӿ��ĵ�����Ҫ��������
-�ӿڲ�����Ϥ��ҵ�����󡢽ӿڵĲ������͡�����
-��д�ӿڲ��Լƻ�����ƽӿڲ��Է����Լ�����
-ʹ�ù���ִ�нӿڲ���
-��д�ӿڲ��Ա���</code></pre>
+<h4 id="TCP-IP的三次握手"><a href="#TCP-IP的三次握手" class="headerlink" title="TCP/IP的三次握手"></a>TCP/IP的三次握手</h4><pre><code>TCP握手协议
+在TCP/IP协议中,TCP协议提供可靠的连接服务,采用三次握手建立一个连接.
+第一次握手：建立连接时,客户端发送syn包(syn=j)到服务器,并进入SYN_SEND状态,等待服务器确认；
+SYN：同步序列编号(Synchronize Sequence Numbers)
+第二次握手：服务器收到syn包,必须确认客户的SYN（ack=j+1）,同时自己也发送一个SYN包（syn=k）,即SYN+ACK包,此时服务器进入SYN_RECV状态；
+第三次握手：客户端收到服务器的SYN＋ACK包,向服务器发送确认包ACK(ack=k+1),此包发送完毕,客户端和服务器进入ESTABLISHED状态,完成三次握手.
+完成三次握手,客户端与服务器开始传送数据</code></pre><h4 id="http协议返回码-1xx-5xx的说明-200-403-404-500"><a href="#http协议返回码-1xx-5xx的说明-200-403-404-500" class="headerlink" title="http协议返回码:1xx-5xx的说明   200 403 404 500"></a>http协议返回码:1xx-5xx的说明   200 403 404 500</h4><pre><code>1××　　保留
+2××　　表示请求成功地接收
+3××　　为完成请求客户需进一步细化请求
+4××　　客户错误
+5××　　服务器错误
+200   指示客服端的请求已经成功收到，解析，接受。
+403   服务器接受请求，但是被拒绝处理。
+404   服务器已经找到任何匹配Request-URI的资源。
+500   服务器遭遇异常阻止了当前请求的执行
+http://www.cnblogs.com/liulei/archive/2010/05/25/1743315.html 参见博客</code></pre><h4 id="get请求和post请求的区别"><a href="#get请求和post请求的区别" class="headerlink" title="get请求和post请求的区别"></a>get请求和post请求的区别</h4><pre><code>get是从服务器上获取数据，post是向服务器传送数据。
+get是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。
+对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据。
+get传送的数据量较小，不能大于2KB。
+post传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。
+get安全性非常低，post安全性较高。但是执行效率却比Post方法好。
+1、get方式的安全性较Post方式要差些，包含机密信息的话，建议用Post数据提交方式；
+2、在做数据查询时，建议用Get方式；而在做数据添加、修改或删除时，建议用Post方式；</code></pre><h4 id="http协议的请求包括哪些内容-响应包括哪些内容"><a href="#http协议的请求包括哪些内容-响应包括哪些内容" class="headerlink" title="http协议的请求包括哪些内容,响应包括哪些内容?"></a>http协议的请求包括哪些内容,响应包括哪些内容?</h4><pre><code>请求包括:
+请求行:包含请求方法,URI,HTTP版本协议
+请求首部字段
+请求内容实体
+响应包括:
+状态行:包含HTTP版本,状态码,状态码,原因短语
+响应首部字段
+响应内容实体</code></pre><h4 id="session、token、cookie的区别"><a href="#session、token、cookie的区别" class="headerlink" title="session、token、cookie的区别"></a>session、token、cookie的区别</h4><p>一. 为什么需要Cookie？<br>HTTP是一种无状态的协议，客户端与服务器建立连接并传输数据，数据传输完成后，连接就会关闭。Cookie是解决HTTP无状态性的有效手段，服务器可以设置或读取Cookie中所包含的信息。当用户登录后，服务器会发送包含登录凭据的Cookie到用户浏览器客户端，而浏览器对该Cookie进行某种形式的存储（内存或硬盘）。用户再次访问该网站时，浏览器会发送该Cookie到服务器，服务器对该凭据进行验证，合法时使用户不必输入用户名和密码就可以直接登录。</p>
+<p>Cookie的类型</p>
+<p>Cookie总时由用户客户端进行保存的，按其存储位置可分为：内存式Cookie和硬盘式Cookie。内存式Cookie存储在内存中，浏览器关闭后就会消失，因此也被称为非持久Cookie或会话Cookie。硬盘式Cookie保存在硬盘中，其不会随浏览器的关闭而消失，除非用户手工清理或到了过期时间，因此也被称为持久Cookie。<br>二.Session和Cookie区别<br>1.Cookie和Session都是会话技术，Cookie是运行在客户端，Session是运行在服务器端。  </p>
+<p>2.Cookie有大小限制以及浏览器在存cookie的个数也有限制，Session是没有大小限制和服务器的内存大小有关。</p>
+<p>3.Cookie有安全隐患，通过拦截或本地文件找得到你的cookie后可以进行攻击。</p>
+<p>4.Session是保存在服务器端上会存在一段时间才会消失，如果session过多会增加服务器的压力。</p>
+<p>三.Session与Token的区别<br>1.token和session都是为了身份验证，session被翻译为会话，token被翻译为令牌。</p>
+<p>2..身份认证 token安全性比session好，因为每个请求都有签名还能防止监听以及重放攻击，而session就必须靠链路层来保障通讯安全。</p>
+<p>3.session和token都需要去管理过期时间。</p>
+<p>4.时间与空间的博弈：session是空间换时间，而token是时间换空间。</p>
+<p>四.Cookie原理<br>Cookie定义了一些HTTP请求头和HTTP响应头，通过这些HTTP头信息使服务器可以与客户进行状态交互。客户端请求服务器后，如果服务器需要记录用户状态，服务器会在响应信息中包含一个Set-Cookie的响应头，客户端会根据这个响应头存储Cookie信息。再次请求服务器时，客户端会在请求信息中包含一个Cookie请求头，而服务器会根据这个请求头进行用户身份、状态等较验。</p>
+<p>五.Session原理<br>当你一次访问服务器的时候，服务器会在内存中开辟一块空间，返回唯一一把打开该空间的钥匙，再把这把钥匙返回到浏览器。当你第二次访问的时候浏览器会携带这把钥匙到服务器端打开对应的空间，如果该空间已经销毁又重新返回开辟一块新的空间返回新的钥匙到浏览器。</p>
+<p>六.Token原理<br>浏览器第一次访问服务器，根据传过来的唯一标识userId，服务端会通过一些算法，如常用的HMAC-SHA256算法，然后加一个密钥，生成一个token，然后通过BASE64编码一下之后将这个token发送给客户端；客户端将token保存起来，下次请求时，带着token，服务器收到请求后，然后会用相同的算法和密钥去验证token，如果通过，执行业务操作，不通过，返回不通过信息。</p>
+<h4 id="设计接口测试用例的思路？"><a href="#设计接口测试用例的思路？" class="headerlink" title="设计接口测试用例的思路？"></a>设计接口测试用例的思路？</h4><pre><code>验证接口功能是否实现并正确（接口逻辑）
+等价类、边界值法
+覆盖入参的同时、要覆盖出参
+参数组合测试</code></pre><h4 id="什么是mock测试"><a href="#什么是mock测试" class="headerlink" title="什么是mock测试"></a>什么是mock测试</h4><h4 id="接口测试流程"><a href="#接口测试流程" class="headerlink" title="接口测试流程"></a>接口测试流程</h4><pre><code>开发接口文档内容：接口请求地址、接口参数个数与类型、接口的用途
+开发写好这个接口文档后，需要评审、完善
+接口测试熟悉：业务需求、接口的参数类型、个数
+编写接口测试计划、设计接口测试方案以及用例
+使用工具执行接口测试
+编写接口测试报告</code></pre>
             </div>
             <hr/>
 
@@ -698,8 +703,8 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
                 </a>
             </div>
             <br/>
-            <a  href="/2019/10/09/接口测试基础/">
-                    《�ӿڲ��Ի���》
+            <a  href="/2019/10/10/接口测试/">
+                    《接口测试基础》
             </a> by
             <a href="http://yoursite.com">
                 kiriharo
@@ -740,9 +745,10 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/10/10/接口测试/">
                     <div class="card-image">
@@ -760,9 +766,9 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -775,6 +781,7 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -793,31 +800,31 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/07/selenium基础/">
+                <a href="/2019/10/09/接口测试基础/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="自动化测试简介">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="�ӿڲ��Ի���">
                         
-                        <span class="card-title">自动化测试简介</span>
+                        <span class="card-title">�ӿڲ��Ի���</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            自动化测试
+                            �ӿڲ��Ե��������
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/自动化/" class="post-category">
-                                    自动化
+                            <a href="/categories/autotest/" class="post-category">
+                                    autotest
                                 </a>
                             
                             
@@ -827,8 +834,8 @@ get��ȫ�Էǳ��ͣ�post��ȫ�Խϸߡ�����ִ��Ч��
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/自动化/">
-                        <span class="chip bg-color">自动化</span>
+                    <a href="/tags/�ӿڲ���/">
+                        <span class="chip bg-color">�ӿڲ���</span>
                     </a>
                     
                 </div>
