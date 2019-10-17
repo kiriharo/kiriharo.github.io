@@ -5,10 +5,11 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Mysql数据库基础了解, Hexo">
-    <meta name="description" content="Mysql数据库使用命令打开数据库:    mysql -h localhost -P 3306 -u root -p    Enter password:
-基本的查询语句select 字段列表 as 别名{,分割}
-from 数据源
-wh">
+    <meta name="description" content="Mysql的约束和函数数据完整性为了保证数据的完整性和唯一性,关系型数据库通过约束机制来实行目的;
+数据完整性通常包括以下三种:
+1.实体完整性:表中有一个主键
+2.域完整性:数据值满足指定的条件
+3.引用完整性:表示与引用表的关系和数据约">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -429,7 +430,7 @@ wh">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-16
+                    2019-10-17
                 </div>
 
                 
@@ -440,61 +441,25 @@ wh">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mysql数据库"><a href="#Mysql数据库" class="headerlink" title="Mysql数据库"></a>Mysql数据库</h1><p><strong>使用命令打开数据库</strong>:<br>    mysql -h localhost -P 3306 -u root -p<br>    Enter password:</p>
-<h2 id="基本的查询语句"><a href="#基本的查询语句" class="headerlink" title="基本的查询语句"></a>基本的查询语句</h2><pre><code>select 字段列表 as 别名{,分割}
-from 数据源
-where 条件表达式
-group by分组字段
-having 条件
-order by排序字段[asc|desc]
-为表名指定库名 select age from mysql.stu</code></pre><h2 id="排序操作–order-by"><a href="#排序操作–order-by" class="headerlink" title="排序操作–order by"></a>排序操作–order by</h2><pre><code>orde by 排序,asc顺序、desc倒序;
-可以多个字段 select age,money from stu order by age asc,money desc;</code></pre><h2 id="limit-distinct关键字"><a href="#limit-distinct关键字" class="headerlink" title="limit\distinct关键字"></a>limit\distinct关键字</h2><pre><code>select * from stu limit 0,5;(从0开始返回5行)
-select * from stu limit 1,5;(从1开始返回5行)
-distinct 过滤\去除重复
-查所有姓名并去除重复的
-select distinct name from stu</code></pre><h2 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h2><table>
-<thead>
-<tr>
-<th align="left">查询条件</th>
-<th align="left">符号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">比较</td>
-<td align="left">=、&lt;、&lt;=、&gt;、&gt;=、！=、&lt;&gt;、&lt;=&gt;</td>
-</tr>
-<tr>
-<td align="left">指定范围</td>
-<td align="left">between and,not between and</td>
-</tr>
-<tr>
-<td align="left">匹配字符</td>
-<td align="left">like ,not like, in , not in</td>
-</tr>
-<tr>
-<td align="left">是否为空</td>
-<td align="left">is null , is not null</td>
-</tr>
-<tr>
-<td align="left">多个条件查询</td>
-<td align="left">and , or</td>
-</tr>
-<tr>
-<td align="left">**between and包括起始值</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">not between and 不包括起始值**</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h2 id="like-通配符"><a href="#like-通配符" class="headerlink" title="like 通配符"></a>like 通配符</h2><pre><code>通配符 : _ (单个字符), %(0个或多个) 使用like进行匹配
-拓展字符:使用rlike匹配
-.单个字符
-[]方括号内所有字符
-* 多个他前面的字符
-^ 以这个开头的
-$ 以这个结尾的</code></pre>
+                <h1 id="Mysql的约束和函数"><a href="#Mysql的约束和函数" class="headerlink" title="Mysql的约束和函数"></a>Mysql的约束和函数</h1><h3 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h3><pre><code>为了保证数据的完整性和唯一性,关系型数据库通过约束机制来实行目的;
+数据完整性通常包括以下三种:
+1.实体完整性:表中有一个主键
+2.域完整性:数据值满足指定的条件
+3.引用完整性:表示与引用表的关系和数据约束(外键)</code></pre><h3 id="常见的约束条件"><a href="#常见的约束条件" class="headerlink" title="常见的约束条件:"></a>常见的约束条件:</h3><ol>
+<li>主键约束:primary key</li>
+<li>外键约束:foreign key</li>
+<li>唯一性约束:unique</li>
+<li>默认值约束:default</li>
+<li>非空约束:not null</li>
+<li>检查约束:check (mysql不支持)</li>
+</ol>
+<h3 id="mysql常用函数"><a href="#mysql常用函数" class="headerlink" title="mysql常用函数"></a>mysql常用函数</h3><p>数学函数<br>字符串函数<br>日期和时间函数<br>系统信息函数</p>
+<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><pre><code>主要用来统计\求和\求平均值等
+max()
+min()
+count()
+sum()
+avg()</code></pre>
             </div>
             <hr/>
 
@@ -654,7 +619,7 @@ $ 以这个结尾的</code></pre>
                 </a>
             </div>
             <br/>
-            <a  href="/2019/10/16/Mysql数据库基础2/">
+            <a  href="/2019/10/17/Mysql数据库基础3/">
                     《Mysql数据库基础了解》
             </a> by
             <a href="http://yoursite.com">
@@ -696,9 +661,10 @@ $ 以这个结尾的</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/10/17/Mysql数据库基础3/">
                     <div class="card-image">
@@ -716,9 +682,9 @@ $ 以这个结尾的</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -731,6 +697,7 @@ $ 以这个结尾的</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -749,31 +716,31 @@ $ 以这个结尾的</code></pre>
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/13/linux基础/">
+                <a href="/2019/10/16/Mysql数据库基础2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Linux系统">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Mysql数据库基础了解">
                         
-                        <span class="card-title">Linux系统</span>
+                        <span class="card-title">Mysql数据库基础了解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux系统的相关内容
+                            Mysql基础
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux系统/" class="post-category">
-                                    Linux系统
+                            <a href="/categories/数据库/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
@@ -783,8 +750,8 @@ $ 以这个结尾的</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux系统/">
-                        <span class="chip bg-color">Linux系统</span>
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>
