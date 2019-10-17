@@ -5,11 +5,10 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Mysql数据库基础了解, Hexo">
-    <meta name="description" content="Mysql的约束和函数数据完整性为了保证数据的完整性和唯一性,关系型数据库通过约束机制来实行目的;
-数据完整性通常包括以下三种:
-1.实体完整性:表中有一个主键
-2.域完整性:数据值满足指定的条件
-3.引用完整性:表示与引用表的关系和数据约">
+    <meta name="description" content="Mysql高级查询内连接第一种方法: =
+第二种方法: a表 join b表 on 连接字段=连接字段
+第三种方法: a表 inner join b表 on 连接字段=连接字段外连接左向外联接:以左表为基础表,右表没有对应数据则返回空
+le">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -441,25 +440,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mysql的约束和函数"><a href="#Mysql的约束和函数" class="headerlink" title="Mysql的约束和函数"></a>Mysql的约束和函数</h1><h3 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h3><pre><code>为了保证数据的完整性和唯一性,关系型数据库通过约束机制来实行目的;
-数据完整性通常包括以下三种:
-1.实体完整性:表中有一个主键
-2.域完整性:数据值满足指定的条件
-3.引用完整性:表示与引用表的关系和数据约束(外键)</code></pre><h3 id="常见的约束条件"><a href="#常见的约束条件" class="headerlink" title="常见的约束条件:"></a>常见的约束条件:</h3><ol>
-<li>主键约束:primary key</li>
-<li>外键约束:foreign key</li>
-<li>唯一性约束:unique</li>
-<li>默认值约束:default</li>
-<li>非空约束:not null</li>
-<li>检查约束:check (mysql不支持)</li>
-</ol>
-<h3 id="mysql常用函数"><a href="#mysql常用函数" class="headerlink" title="mysql常用函数"></a>mysql常用函数</h3><p>数学函数<br>字符串函数<br>日期和时间函数<br>系统信息函数</p>
-<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><pre><code>主要用来统计\求和\求平均值等
-max()
-min()
-count()
-sum()
-avg()</code></pre>
+                <h1 id="Mysql高级查询"><a href="#Mysql高级查询" class="headerlink" title="Mysql高级查询"></a>Mysql高级查询</h1><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><pre><code>第一种方法: =
+第二种方法: a表 join b表 on 连接字段=连接字段
+第三种方法: a表 inner join b表 on 连接字段=连接字段</code></pre><h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><pre><code>左向外联接:以左表为基础表,右表没有对应数据则返回空
+left join 或 left outer join
+右向外联接:以右表为基础表,左表没有对应数据则返回空
+right join 或 right outer join</code></pre><h3 id="外键约束和主外建约束"><a href="#外键约束和主外建约束" class="headerlink" title="外键约束和主外建约束"></a>外键约束和主外建约束</h3><pre><code>删除时需要先删子表数据,然后再删主表
+俩表都必须是innodb表,且没有临时表
+创建方式:foreign key (字段名) references 表名(字段名)</code></pre><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><p>派生表<br>联合查询</p>
+
             </div>
             <hr/>
 
@@ -619,7 +608,7 @@ avg()</code></pre>
                 </a>
             </div>
             <br/>
-            <a  href="/2019/10/17/Mysql数据库基础3/">
+            <a  href="/2019/10/17/Mysql数据库基础4/">
                     《Mysql数据库基础了解》
             </a> by
             <a href="http://yoursite.com">
@@ -661,9 +650,10 @@ avg()</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/10/17/Mysql数据库基础4/">
                     <div class="card-image">
@@ -681,9 +671,9 @@ avg()</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -696,6 +686,7 @@ avg()</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -714,7 +705,7 @@ avg()</code></pre>
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/16/Mysql数据库基础2/">
+                <a href="/2019/10/17/Mysql数据库基础3/">
                     <div class="card-image">
                         
                         
@@ -731,7 +722,7 @@ avg()</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-17
                             </span>
                         <span class="publish-author">
                             
